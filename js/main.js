@@ -5,7 +5,7 @@
   
   var sections = ['about', 'portfolio', 'contact'];
 
-  //This would all normally be obfuscated and crushed
+  //This would all normally be obfuscated and crushed via uglifyjs or jscrush
 
   // I don't like to use JQuery if all I need is a 'ready' function
   // This will do nicely instead
@@ -66,11 +66,6 @@
     // cross browser scroll position
     var docScrollY = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
-    console.log('    docScrollY ='+docScrollY);
-    console.log('    about ='+getScrollPosition('about'));
-    console.log('portfolio ='+getScrollPosition('portfolio'));
-    console.log('  contact ='+getScrollPosition('contact'));
-
     // get viewport height
     var elem = (document.compatMode === "CSS1Compat") ?  document.documentElement : document.body;
     var viewportHeight = elem.clientHeight;
@@ -80,7 +75,7 @@
   
     if(docScrollY + viewportHeight > getDocHeight() - 50)
     {
-      console.log('contactadfadf');
+      console.log('contact');
       if(hash != 'contact')
       {
         location.hash = '#/contact';
@@ -111,8 +106,6 @@
       updateLinks();
     }
 
-    console.log('--------');
-
   }
   
   function getDocHeight() {
@@ -122,8 +115,7 @@
         Math.max(d.body.offsetHeight, d.documentElement.offsetHeight),
         Math.max(d.body.clientHeight, d.documentElement.clientHeight)
     );
-}
-
+  }
 
   function getScrollPosition(target)
   {
