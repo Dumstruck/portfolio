@@ -55,12 +55,20 @@ Theme Styles
 body {
   box-sizing: border-box;
   color:#333;
-  background: #fff;
+  background: #ECEEEE;
   font-size: 16px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.75em;
   -webkit-font-smoothing: antialiased;
 }
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 
 .center
 {
@@ -105,23 +113,39 @@ p {
   text-align: justify;
 }
 
+p, ul:not(.skills)
+{
+  text-shadow: 0 1px #fff;
+}
+
 a {
   text-decoration: none;
   color: #335599;
   transition: all 0.5s ease;
 }
 
-
 #links a
 {
-  color: #333;
+  color: #8E9AA5;
   text-shadow: none;
 }
 
-a:hover, a.active, #links a:hover, #links a.active
+a:hover
+{
+  color: #439de9;
+}
+
+
+a.active, #links a:hover, #links a.active, #links a.active:hover
 {
   color: #439de9;
   text-shadow: 0 0 7px rgba(71, 159, 233, 0.5);
+}
+
+#links a:hover
+{
+  color: #80BEF3;
+  text-shadow: none;
 }
 
 em {
@@ -328,9 +352,7 @@ Customized Styles
   top: 130px;
   animation: flicker 21.23s linear infinite;
   /* transform-origin: 50px 50px;*/
-
 }
-
 
 @keyframes flicker
 {
@@ -480,12 +502,6 @@ section h3
 {
   display: block;
 }
-
-
-/*******************************************************************************
-Full-Width Styles
-*******************************************************************************/
-
 
 
 /*******************************************************************************

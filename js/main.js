@@ -1,7 +1,6 @@
 !function() { 
 
   "use strict";
-
   
   var sections = ['about', 'portfolio', 'contact'];
 
@@ -14,6 +13,7 @@
   }
   else
   {
+    // IE
     document.onreadystatechange = function () {
       if(document.readyState == "interactive") {
         init();
@@ -23,6 +23,8 @@
 
   function init()
   {
+    document.body.className = "";
+
     scrollIntoView();
 
     sections.forEach(function(section)
