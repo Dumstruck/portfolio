@@ -260,6 +260,7 @@ Customized Styles
 #logo-container
 {
   height: 350px;
+  background: #000;
   background: linear-gradient(to bottom, rgb(0,0,0) 83%,rgb(44, 44, 44) 100%);
 }
 
