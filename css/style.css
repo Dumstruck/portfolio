@@ -1,5 +1,4 @@
 
-
 @import url('portfolio-sprites.css');
 
 /*******************************************************************************
@@ -262,7 +261,7 @@ Customized Styles
 #logo-container
 {
   height: 350px;
-  background: #000;
+  background: linear-gradient(to bottom, rgb(0,0,0) 83%,rgba(31, 31, 34) 100%);
 }
 
 #logo
